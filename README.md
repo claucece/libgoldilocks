@@ -1,5 +1,6 @@
 # Goldilocks library
 
+
 The Goldilocks library is a production library, providing the ed448 elliptic curve. It is based on Mike Hamburg's libdecaf library:
 [ed448goldilocks](https://sourceforge.net/p/ed448goldilocks/code/ci/master/tree/).
 
