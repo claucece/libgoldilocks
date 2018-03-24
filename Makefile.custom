@@ -127,14 +127,13 @@ $(BUILD_C)/decaf_tables.c: $(BUILD_IBIN)/goldilocks_gen_tables
 	./$< > $@ || (rm $@; exit 1)
 
 $(BUILD_OBJ)/%.o: $(BUILD_C)/%.c $(HEADERS)
-	$(CC) $(CFLAGS) -c -o $@ $< \
+	$(CC) $(CFLAGS) -c $@ $< \
 		-I build/obj/ -I src/ -I src/arch_x86_64 -I src/include/arch_x86_64
 
 $(BUILD_OBJ)/goldilocks_gen_tables.o: src/goldilocks_gen_tables.c $(HEADERS)
 	$(CC) $(CFLAGS) \
 		-I build/obj/ -I src -I src/arch_x86_64 -I src/include/arch_x86_64 \
-		-c -o $< $@
-
+		-c $@ $<
 
 # The shakesum utility is in the public bin directory.
 $(BUILD_BIN)/shakesum: $(BUILD_OBJ)/shakesum.o $(BUILD_OBJ)/shake.o $(BUILD_OBJ)/utils.o
