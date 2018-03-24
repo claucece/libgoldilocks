@@ -34,7 +34,7 @@ PYTHON ?= python
 WARNFLAGS = -pedantic -Wall -Wextra -Werror -Wunreachable-code \
 	 -Wmissing-declarations -Wunused-function -Wno-overlength-strings $(EXWARN)
 
-INCFLAGS = -Isrc -Isrc/include -I$(BUILD_INC) -Isrc/include/arch_x86_64 -Isrc/arch_x86_64
+INCFLAGS = -Isrc/include -I$(BUILD_INC) -Isrc/include/arch_x86_64 -Isrc/arch_x86_64
 PUB_INCFLAGS = -I$(BUILD_INC)
 LANGFLAGS = -std=c99 -fno-strict-aliasing
 LANGXXFLAGS = -fno-strict-aliasing
